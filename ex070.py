@@ -5,7 +5,7 @@ C) qual é o nome do produto mais barato. '''
 print('-' * 30)
 print('ALAN INFORMÁTICA')
 print('-' * 30)
-cont_preco = total = prod1000 = 0
+cont_preco = total_gasto = prod_acima_1000 = 0
 prod_barato = float('inf')
 nome_prod_barato = ' '
 while True:
@@ -16,12 +16,13 @@ while True:
     prod_barato = preco
     nome_prod_barato = produto
   if preco > 1000:
-    prod1000 += 1
+    prod_acima_1000 += 1
   mantem = ' '
   while mantem not in 'SN':
     mantem = str(input('Quer continuar ? [S/N]')).strip().upper()[0]
   if mantem == 'N':
-    total = cont_preco 
-    print(f'O total gasto na compra foi de R$: {total:.2f}. O número de produtos acima de R$:1000,00 foi de {prod1000} e o produto mais barato foi {nome_prod_barato} custando R$:{prod_barato}')
+    total_gasto = cont_preco 
+    print(f'O total gasto na compra foi de R$: {total_gasto:.2f}. O número de produtos acima de R$:1000,00 foi de {prod_acima_1000} e o produto mais barato foi {nome_prod_barato} custando R$:{prod_barato}')
     break
 print('FIM')
+
